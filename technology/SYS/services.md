@@ -2,11 +2,12 @@
 title: services
 description: 
 published: true
-date: 2019-12-13T22:09:06.808Z
+date: 2019-12-13T22:10:47.699Z
 tags: sys, sys-services
 ---
 
 # Daemons
+also known as background processes
 
 ## systemd
 

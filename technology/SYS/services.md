@@ -2,8 +2,8 @@
 title: services
 description: 
 published: true
-date: 2019-12-13T22:10:47.699Z
-tags: sys, sys-services
+date: 2019-12-13T23:18:16.225Z
+tags: sys
 ---
 
 # Daemons

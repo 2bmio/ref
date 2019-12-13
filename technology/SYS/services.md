@@ -2,13 +2,11 @@
 title: services
 description: 
 published: true
-date: 2019-12-13T22:04:03.716Z
+date: 2019-12-13T22:06:16.743Z
 tags: sys, sys-services
 ---
 
-# Header
-Your content here
-
+# Daemons
 
 ## systemd
 

@@ -2,9 +2,8 @@
 title: HOME
 description: 
 published: true
-date: 2019-12-13T21:37:23.660Z
+date: 2019-12-13T21:43:23.817Z
 tags: 
 ---
 
-# Header
-Your content here
+# To Become Masterful

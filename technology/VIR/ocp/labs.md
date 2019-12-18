@@ -2,7 +2,7 @@
 title: laboratories
 description: testing and playground 
 published: true
-date: 2019-12-18T17:42:46.731Z
+date: 2019-12-18T17:43:51.200Z
 tags: vir, ocp, labs
 ---
 
@@ -14,7 +14,7 @@ tags: vir, ocp, labs
 > OpenShift Web Console: v3.9.71 
 
 ```
-t exploshift
+t es
 ```
 
 
@@ -27,7 +27,7 @@ t exploshift
 
 
 ```
-t proshift
+t ps
 ```
 
 
@@ -37,7 +37,7 @@ Kubernetes Version: v1.14.6+868bc38
 Channel: stable-4.2
 
 ```
-t ultrashift
+t us
 ```
 
 

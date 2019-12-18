@@ -1,8 +1,8 @@
 ---
-title: Laboratories
+title: laboratories
 description: testing and playground 
 published: true
-date: 2019-12-18T17:21:34.109Z
+date: 2019-12-18T17:22:06.025Z
 tags: vir, ocp, labs
 ---
 

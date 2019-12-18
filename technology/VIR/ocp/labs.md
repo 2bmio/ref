@@ -2,7 +2,7 @@
 title: laboratories
 description: testing and playground 
 published: true
-date: 2019-12-18T17:22:06.025Z
+date: 2019-12-18T17:27:49.976Z
 tags: vir, ocp, labs
 ---
 
@@ -22,6 +22,11 @@ tags: vir, ocp, labs
 
 
 # ultrashift
-Your content here
+OpenShift Version: 4.2.2
+Kubernetes Version: v1.14.6+868bc38
+Channel: stable-4.2
+
+
+
 
 

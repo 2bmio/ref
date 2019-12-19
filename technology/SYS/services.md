@@ -2,7 +2,7 @@
 title: services
 description: 
 published: true
-date: 2019-12-13T23:42:49.105Z
+date: 2019-12-19T16:18:14.598Z
 tags: sys
 ---
 
@@ -12,6 +12,18 @@ also known as background processes
 ## systemd
 
 > path of the journald configuration file `/etc/systemd/journald.conf`
+> ```
+>  SystemMaxUse=1G
+>  MaxFileSec=7day
+> ```
+
+
+#### restart service
+
+
+`systemctl restart systemd-journald`
+
+
 
 > e.g.: to remove archived journal files until the disk space they use falls below 100M `SystemMaxUse=100M`
 

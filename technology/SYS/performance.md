@@ -2,7 +2,7 @@
 title: performance
 description: performance and maintenance
 published: true
-date: 2019-12-18T21:38:35.705Z
+date: 2019-12-19T15:29:24.130Z
 tags: sys, performance
 ---
 
@@ -30,5 +30,7 @@ watch "ps -eo user,pid,ppid,cmd,%mem,%cpu,stat,start --sort=-%cpu | head"
 
 ```
 du -ksh * | sort -nr
+df -h  | sort -nr
+
 du -sm * | sort -nr
 ```

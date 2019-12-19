@@ -2,7 +2,7 @@
 title: laboratories
 description: testing and playground 
 published: true
-date: 2019-12-18T17:44:49.221Z
+date: 2019-12-19T12:19:05.770Z
 tags: vir, ocp, labs
 ---
 
@@ -42,5 +42,16 @@ Channel: stable-4.2
 # direcct connect
 t us
 ```
+
+# API manager
+
+```
+connect to address 192.168.XXX.XXX and port 9444: Connection refused
+HTTP CRITICAL - Unable to open TCP socket
+```
+
+
+
+
 
 

@@ -1,8 +1,8 @@
 ---
-title: networking
+title: Kubernetes → networking
 description: These tools may be useful if you are debugging connectivity issues, investigating network throughput problems, or exploring Kubernetes to learn how it operates.
 published: true
-date: 2019-12-18T16:39:32.684Z
+date: 2019-12-23T11:27:38.671Z
 tags: k8s, vir
 ---
 

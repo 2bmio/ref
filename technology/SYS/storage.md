@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2019-12-23T22:52:17.525Z
+date: 2019-12-23T23:14:57.564Z
 tags: sys, storage
 ---
 

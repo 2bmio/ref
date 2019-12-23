@@ -1,14 +1,15 @@
 ---
-title: System → space
-description: linux ephemeral place
+title: System → storage
+description: linux ephemeral place and storage
 published: true
-date: 2019-12-23T11:46:50.788Z
-tags: sys, space
+date: 2019-12-23T22:47:28.478Z
+tags: sys, storage
 ---
 
 # Header
 Your content here
 
+# memory
 
 ## SWAP
 
@@ -36,3 +37,8 @@ top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100
 ps -e -orss=,args= | sort -b -k1,1n | pr -TW$COLUMNS
 ps -eo user,pid,ppid,cmd,%mem,%cpu,stat,start --sort=-%mem | head
 ```
+
+# LVM
+
+
+

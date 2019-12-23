@@ -1,8 +1,8 @@
 ---
-title: laboratories
+title: OpenShift → laboratories
 description: testing and playground 
 published: true
-date: 2019-12-19T12:19:05.770Z
+date: 2019-12-23T11:26:54.181Z
 tags: vir, ocp, labs
 ---
 

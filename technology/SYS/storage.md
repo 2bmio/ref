@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2019-12-23T22:47:28.478Z
+date: 2019-12-23T22:52:17.525Z
 tags: sys, storage
 ---
 
@@ -40,5 +40,18 @@ ps -eo user,pid,ppid,cmd,%mem,%cpu,stat,start --sort=-%mem | head
 
 # LVM
 
+Configure volume | it will be accessible at `/mnt/volume-nbg1-1`.
 
+```
+# Format volume
+sudo mkfs.xfs -F /dev/disk/by-id/scsi-0HC_Volume_3858306
 
+# Create directory
+mkdir /mnt/volume-nbg1-1
+
+# Mount volume
+mount -o discard,defaults /dev/disk/by-id/scsi-0HC_Volume_3858306 /mnt/volume-nbg1-1
+
+#Optional: Add volume to fstab
+echo "/dev/disk/by-id/scsi-0HC_Volume_3858306 /mnt/volume-nbg1-1 xfs discard,nofail,defaults 0 0" >> /etc/fstab
+```

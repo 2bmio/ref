@@ -2,9 +2,17 @@
 title: OpenShift → adm
 description: administrator CLI operations and their syntax.
 published: true
-date: 2019-12-23T11:15:28.379Z
+date: 2019-12-26T10:32:47.067Z
 tags: vir, ocp
 ---
+
+
+# get cluster info
+
+```
+oc adm top node --heapster-namespace=openshift-infra --heapster-scheme=https
+
+```
 
 # Troubleshooting
 

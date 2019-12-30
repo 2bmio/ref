@@ -2,11 +2,11 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2019-12-26T10:36:00.117Z
+date: 2019-12-30T19:55:22.072Z
 tags: k8s, vir
 ---
 
-# CheatSheet
+## CheatSheet
 
 ```
 kubectl get services                # List all services 
@@ -53,3 +53,13 @@ kubeadm reset                                             # Reset current state
 kubectl get secrets                                       # List all secrets
 
 ```
+
+
+## ninja
+
+
+```
+
+
+```
+

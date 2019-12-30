@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2019-12-30T19:55:22.072Z
+date: 2019-12-30T20:13:19.890Z
 tags: k8s, vir
 ---
 
@@ -60,6 +60,41 @@ kubectl get secrets                                       # List all secrets
 
 ```
 
+# bash
+source <(kubectl completion bash) 
+echo "source <(kubectl completion bash)" >> ~/.bashrc 
+alias k=kubectl
+complete -F __start_kubectl k
+
+# zsh
+source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
+echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~/.zshrc # add autocomplete permanently to your zsh shell
+
+## kubectl get ns <tab>
+
+
+kubectl apply -f manifest.yaml
+kubectl delete -f manifest.yaml
+
+kubectl run -it alpine --image=alpine -- sh
+
+kubectl get pods -l run=nginx --all-namespaces
+
+kubectl get pods -o=name
+kubectl get pods -o=wide
+kubectl get pods -o=yaml
+kubectl get pods -o=json
+
+kubectl -n nginx1 get pod nginx-6fd8984946-8m648 -o yaml --export
+
+kubectl get pods -l run=nginx --all-namespaces -o \
+  jsonpath='{.items[*].spec.containers[*].image}'
+  
+kubectl top node <nombre-del-nodo>
+
+kubectl get componentstatuses
+
+kubectl api-resources
 
 ```
 

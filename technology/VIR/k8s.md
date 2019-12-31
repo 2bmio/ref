@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2019-12-30T20:42:10.252Z
+date: 2019-12-31T20:58:36.096Z
 tags: k8s, vir
 ---
 
@@ -59,6 +59,10 @@ kubectl get secrets                                       # List all secrets
 
 
 ```
+# -------- 0		→ Accessing Clusters
+kubectl config view
+
+
 # -------- 1		→ Kubectl Autocomplete
 # bash
 source <(kubectl completion bash) 
@@ -90,6 +94,10 @@ kubectl get pods -o=json
 
 # -------- 6		→ Get pods para hacer un manifest
 kubectl -n nginx1 get pod nginx-6fd8984946-8m648 -o yaml --export
+kubectl -n rabbitmq get pods
+oc get cm/logstash --export -o yaml -n rabbitmq >cm-logstash.yml
+
+
 
 # -------- 7		→ Get the version label of all pods with label app=cassandra
 kubectl get pods -l run=nginx --all-namespaces -o \

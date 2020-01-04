@@ -2,7 +2,7 @@
 title: System → macOS → home
 description: 
 published: true
-date: 2020-01-04T16:07:28.311Z
+date: 2020-01-04T16:12:29.463Z
 tags: sys, macos, home
 ---
 
@@ -19,6 +19,11 @@ https://www.tonymacx86.com/threads/unibeast-install-macos-mojave-on-any-supporte
 ```
 MultiBeast-11.3.0 Mojave-Edition
 UniBeast-9.2.0
+
+Contains Clover EFI v2.4k r4920
+Clover v2 is open source based on different projects: Clover, rEFIt, XNU, VirtualBox. The main is EDK2 latest revision. http://sourceforge.net/projects/cloverefiboot/
+
+
 ```
 
 

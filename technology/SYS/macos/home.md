@@ -2,7 +2,7 @@
 title: System → macOS → home
 description: 
 published: true
-date: 2020-01-04T16:40:12.782Z
+date: 2020-01-04T17:30:02.711Z
 tags: sys, macos, home
 ---
 

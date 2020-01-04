@@ -2,7 +2,7 @@
 title: System → macOS → home
 description: 
 published: true
-date: 2020-01-04T16:00:19.714Z
+date: 2020-01-04T16:02:33.317Z
 tags: sys, macos, home
 ---
 
@@ -24,6 +24,7 @@ UniBeast-9.2.0
 	+	Click Erase button
 	+	For Name: type USB (You can rename it later)
 	+ For Format: choose Mac OS Extended (Journaled)
+	+ GUID Partition Map
 
 ## 10.15 Catalina . October 7, 2019
 

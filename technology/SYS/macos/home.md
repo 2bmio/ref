@@ -2,7 +2,7 @@
 title: System → macOS → home
 description: 
 published: true
-date: 2020-01-04T16:27:50.745Z
+date: 2020-01-04T16:40:12.782Z
 tags: sys, macos, home
 ---
 
@@ -17,7 +17,7 @@ Your content here
 https://github.com/Sniki/HP6300-HP8300
 https://www.tonymacx86.com/threads/guide-hp-elite-8300-6300-pro-all-form-factors-using-clover-uefi-hotpatch.265384/
 
-
+https://github.com/CloverHackyColor/CloverBootloader
 
 
 ingredients

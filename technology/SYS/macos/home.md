@@ -2,7 +2,7 @@
 title: System → macOS → home
 description: 
 published: true
-date: 2020-01-04T17:30:02.711Z
+date: 2020-01-04T18:03:28.397Z
 tags: sys, macos, home
 ---
 
@@ -12,7 +12,7 @@ Your content here
 
 ## 10.14 Mojave . September 24, 2018
 
-### hp compaq elite 8300
+### hp compaq elite 8300 Intel HD4000 Graphics QE/CI
 
 https://github.com/Sniki/HP6300-HP8300
 https://www.tonymacx86.com/threads/guide-hp-elite-8300-6300-pro-all-form-factors-using-clover-uefi-hotpatch.265384/

@@ -2,7 +2,7 @@
 title: System → macOS → home
 description: 
 published: true
-date: 2020-01-04T22:56:48.742Z
+date: 2020-01-05T22:56:17.876Z
 tags: sys, macos, home
 ---
 
@@ -42,3 +42,6 @@ https://www.tonymacx86.com/threads/guide-hp-elite-8300-6300-pro-all-form-factors
 ```
  ./ssdtPRGen.sh -c 2
 ```
+
+
+### ATX →

@@ -2,14 +2,12 @@
 title: OpenShift → minishift
 description: Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine. 
 published: true
-date: 2020-01-07T22:36:50.296Z
+date: 2020-01-07T23:18:26.840Z
 tags: vir, ocp, minishift
 ---
 
 # Standard
-installation
-
-
+output
 
 ```
 hift-image-registry" "openshift-router"
@@ -30,4 +28,9 @@ To login as administrator:
 
 
 -- Exporting of OpenShift images is occuring in background process with pid 12853.
+```
+
+```
+$ minishift addon apply admin-user
+$ oc login -u admin
 ```

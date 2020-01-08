@@ -2,7 +2,7 @@
 title: OpenShift → minishift
 description: Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine. 
 published: true
-date: 2020-01-08T23:22:30.895Z
+date: 2020-01-08T23:30:31.228Z
 tags: vir, ocp, minishift
 ---
 
@@ -99,7 +99,8 @@ sudo virsh net-start default
 sudo virsh net-autostart default
 ```
 
-> Step 3: Install Minishift
+> Step 3: Install Minishift 
+check version → https://github.com/minishift/minishift/releases
 
 ```
 export VER="1.34.1"
@@ -107,8 +108,17 @@ curl -L https://github.com/minishift/minishift/releases/download/v$VER/minishift
 tar xvf minishift-$VER-linux-amd64.tgz
 sudo mv minishift-$VER-linux-amd64/minishift /usr/local/bin 
 $ minishift version
-minishift v1.34.1+c2ff9cb
+	minishift v1.34.1+c2ff9cb
+
+sudo dnf install libvirt qemu-kvm -y
+sudo usermod -a -G libvirt $USER
+newgrp libvirt
+
+sudo curl -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm -o /usr/local/bin/docker-machine-driver-kvm
+sudo chmod +x /usr/local/bin/docker-machine-driver-kvm
 ```
+
+
 
 > essntials commands
 

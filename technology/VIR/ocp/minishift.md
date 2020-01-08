@@ -2,7 +2,7 @@
 title: OpenShift → minishift
 description: Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine. 
 published: true
-date: 2020-01-08T00:09:14.489Z
+date: 2020-01-08T22:38:00.870Z
 tags: vir, ocp, minishift
 ---
 
@@ -60,5 +60,4 @@ docker tag registry.redhat.io/openjdk/openjdk-11-rhel7:1.1 172.30.1.1:5000/opens
 docker login -u admin -p kiCcJoQiI-iaoffUfstXaDnsxLwm3lGSPNY2fxBcUk4 172.30.1.1:5000
 docker push 172.30.1.1:5000/openshift/openjdk-11-rhel7:1.1
 ```
-
 

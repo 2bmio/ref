@@ -2,7 +2,7 @@
 title: OpenShift → minishift
 description: Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine. 
 published: true
-date: 2020-01-07T23:30:44.916Z
+date: 2020-01-08T00:09:14.489Z
 tags: vir, ocp, minishift
 ---
 
@@ -30,8 +30,35 @@ To login as administrator:
 -- Exporting of OpenShift images is occuring in background process with pid 12853.
 ```
 
+### admin access
 ```
 $ minishift addon apply admin-user
 $ oc login -u admin
+```
+
+### registry playground
 
 ```
+1. Create ImageStream
+
+    - `oc create -f openjdk-web-basic-s2i.yml  -n openshift`
+
+2. Create ImageStream
+
+    - `oc create is "openjdk-11-rhel7" -n openshift`
+
+minishift ssh
+
+3. Docker PULL
+
+    - `docker pull registry.redhat.io/openjdk/openjdk-11-rhel7:1.1`
+
+4. Docker PULL
+$(minishift openshift registry)
+
+docker tag registry.redhat.io/openjdk/openjdk-11-rhel7:1.1 172.30.1.1:5000/openshift/openjdk-11-rhel7:1.1
+docker login -u admin -p kiCcJoQiI-iaoffUfstXaDnsxLwm3lGSPNY2fxBcUk4 172.30.1.1:5000
+docker push 172.30.1.1:5000/openshift/openjdk-11-rhel7:1.1
+```
+
+

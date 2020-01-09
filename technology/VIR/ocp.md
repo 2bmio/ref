@@ -2,7 +2,7 @@
 title: OpenShift → home
 description: 
 published: true
-date: 2020-01-08T23:27:17.448Z
+date: 2020-01-09T14:18:43.542Z
 tags: vir, ocp
 ---
 
@@ -14,4 +14,8 @@ Your content here
 $ oc version
 $ oc login -u system:admin
 $ oc config view
+$ oc get nodes
+$ oc get node <node>
+$ oc describe node <node>
+$ oc delete node <node>
 ```

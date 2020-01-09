@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2019-12-23T23:14:57.564Z
+date: 2020-01-09T13:58:53.051Z
 tags: sys, storage
 ---
 
@@ -37,6 +37,10 @@ top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100
 ps -e -orss=,args= | sort -b -k1,1n | pr -TW$COLUMNS
 ps -eo user,pid,ppid,cmd,%mem,%cpu,stat,start --sort=-%mem | head
 ```
+
+### 
+
+
 
 # LVM
 

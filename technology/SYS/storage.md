@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2020-01-10T09:52:51.280Z
+date: 2020-01-10T10:01:51.535Z
 tags: sys, storage
 ---
 
@@ -14,34 +14,52 @@ Your content here
 ## SWAP
 
 ```
+#####################################################################################################
+MULTIPLE SWAP
+#############
+
+# show initial
 swapon --show
 NAME      TYPE      SIZE USED PRIO
 /dev/dm-1 partition   2G   0B   -2
 
-
-fallocate -l 2G /extra-swap
+# create swap file
 dd if=/dev/zero of=/extra-swap bs=2G count=1
 
+# check it
 ls -lh /extra-swap
+
+# change permissions
 chmod 600 /extra-swap
+
+# make the swap
 mkswap /extra-swap
+
+# make available it → as you can see the priority is 100 it's mean higter numbers is maximun priority, in this case the swap file is used before the swap partition.
 swapon --priority 100 /extra-swap
 
+# check if it's up and running
 [root@centos7 /]# free -m
               total        used        free      shared  buff/cache   available
 Mem:           3.6G        251M        2.2G        8.5M        1.2G        3.1G
 Swap:          4.0G        520K        4.0G
 
-
+# do the changes permanent → it's mean if the system goes rebooted the extra swap go up!
 vi /etc/fstab
-
-/dev/mapper/centos_centos7-swap swap                    swap    defaults        0 0
 /extra-swap swap swap defaults,pri=100 0 0
 
+# if you what check it, reboot the system and look arround..
+sync
+init 6
+
+# login again and check, cheers!
 swapon --show
+[root@centos7 ~]# swapon --show
+NAME        TYPE      SIZE USED PRIO
+/extra-swap file        2G   0B  100
+/dev/dm-1   partition   2G   0B   -2
 
-
-
+#####################################################################################################
 
 
 dd if=/dev/zero of=/home/swap bs=1024 count=4096k

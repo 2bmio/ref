@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2020-01-10T09:29:19.265Z
+date: 2020-01-10T09:32:50.364Z
 tags: sys, storage
 ---
 
@@ -20,10 +20,11 @@ NAME      TYPE      SIZE USED PRIO
 
 
 fallocate -l 2G /extra-swap
-ls -lh /swapfile
+ls -lh /extra-swap
 chmod 600 /extra-swap
 mkswap /extra-swap
 swapon --priority 100 /extra-swap
+swapon -p 100 /extra-swap
 
 vi /etc/fstab
 

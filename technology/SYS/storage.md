@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2020-01-10T09:28:21.703Z
+date: 2020-01-10T09:29:19.265Z
 tags: sys, storage
 ---
 
@@ -27,12 +27,10 @@ swapon --priority 100 /extra-swap
 
 vi /etc/fstab
 
-/swapfile  swap  swap  defaults  0 0
-
+/dev/mapper/centos_centos7-swap swap                    swap    defaults        0 0
+/extra-swap swap swap defaults,pri=100 0 0
 
 swapon --show
-
-/extra-swap swap swap defaults,pri=100 0 0
 
 
 dd if=/dev/zero of=/extra-swap bs=2G count=1

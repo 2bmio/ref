@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2020-01-10T10:01:51.535Z
+date: 2020-01-10T13:06:37.622Z
 tags: sys, storage
 ---
 
@@ -25,6 +25,8 @@ NAME      TYPE      SIZE USED PRIO
 
 # create swap file
 dd if=/dev/zero of=/extra-swap bs=2G count=1
+# if get → dd: memory exhausted by input buffer of size  you can use:
+dd if=/dev/zero of=/extra-swap bs=1M count=2000
 
 # check it
 ls -lh /extra-swap
@@ -37,6 +39,7 @@ mkswap /extra-swap
 
 # make available it → as you can see the priority is 100 it's mean higter numbers is maximun priority, in this case the swap file is used before the swap partition.
 swapon --priority 100 /extra-swap
+swapon /extra-swap
 
 # check if it's up and running
 [root@centos7 /]# free -m
@@ -47,6 +50,7 @@ Swap:          4.0G        520K        4.0G
 # do the changes permanent → it's mean if the system goes rebooted the extra swap go up!
 vi /etc/fstab
 /extra-swap swap swap defaults,pri=100 0 0
+/extra-swap swap swap defaults 0 0
 
 # if you what check it, reboot the system and look arround..
 sync

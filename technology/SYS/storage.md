@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2020-01-10T13:06:37.622Z
+date: 2020-01-10T13:10:12.372Z
 tags: sys, storage
 ---
 
@@ -48,6 +48,7 @@ Mem:           3.6G        251M        2.2G        8.5M        1.2G        3.1G
 Swap:          4.0G        520K        4.0G
 
 # do the changes permanent → it's mean if the system goes rebooted the extra swap go up!
+cp /etc/fstab /etc/fstab-bk
 vi /etc/fstab
 /extra-swap swap swap defaults,pri=100 0 0
 /extra-swap swap swap defaults 0 0

@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2020-01-09T13:58:53.051Z
+date: 2020-01-10T09:28:21.703Z
 tags: sys, storage
 ---
 
@@ -14,6 +14,33 @@ Your content here
 ## SWAP
 
 ```
+swapon --show
+NAME      TYPE      SIZE USED PRIO
+/dev/dm-1 partition   2G   0B   -2
+
+
+fallocate -l 2G /extra-swap
+ls -lh /swapfile
+chmod 600 /extra-swap
+mkswap /extra-swap
+swapon --priority 100 /extra-swap
+
+vi /etc/fstab
+
+/swapfile  swap  swap  defaults  0 0
+
+
+swapon --show
+
+/extra-swap swap swap defaults,pri=100 0 0
+
+
+dd if=/dev/zero of=/extra-swap bs=2G count=1
+ls -lh /extra-swap
+chmod 600 /extra-swap
+
+
+
 dd if=/dev/zero of=/home/swap bs=1024 count=4096k
 mkswap /home/swap
     Setting up swapspace version 1, size = 4194300 KiB
@@ -36,6 +63,8 @@ dd if=/dev/zero of=/swapfile bs=1k count=4096k
 top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}'
 ps -e -orss=,args= | sort -b -k1,1n | pr -TW$COLUMNS
 ps -eo user,pid,ppid,cmd,%mem,%cpu,stat,start --sort=-%mem | head
+
+
 ```
 
 ### 

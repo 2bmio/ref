@@ -2,7 +2,7 @@
 title: System → storage
 description: linux ephemeral place and storage
 published: true
-date: 2020-01-10T09:32:50.364Z
+date: 2020-01-10T09:52:51.280Z
 tags: sys, storage
 ---
 
@@ -20,11 +20,18 @@ NAME      TYPE      SIZE USED PRIO
 
 
 fallocate -l 2G /extra-swap
+dd if=/dev/zero of=/extra-swap bs=2G count=1
+
 ls -lh /extra-swap
 chmod 600 /extra-swap
 mkswap /extra-swap
 swapon --priority 100 /extra-swap
-swapon -p 100 /extra-swap
+
+[root@centos7 /]# free -m
+              total        used        free      shared  buff/cache   available
+Mem:           3.6G        251M        2.2G        8.5M        1.2G        3.1G
+Swap:          4.0G        520K        4.0G
+
 
 vi /etc/fstab
 
@@ -34,9 +41,6 @@ vi /etc/fstab
 swapon --show
 
 
-dd if=/dev/zero of=/extra-swap bs=2G count=1
-ls -lh /extra-swap
-chmod 600 /extra-swap
 
 
 

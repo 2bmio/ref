@@ -2,7 +2,7 @@
 title: Kubernetes → microk8s
 description: A single package of k8s for 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.
 published: true
-date: 2020-01-11T12:39:52.700Z
+date: 2020-01-11T12:43:02.394Z
 tags: k8s, vir, microk8s
 ---
 
@@ -40,6 +40,18 @@ microk8s.add-node
 microk8s.status
 microk8s.enable --help
 microk8s.enable dns dashboard ingress
+
+## List of the most important addons
+
+*   dns: Deploy DNS. This addon may be required by others, thus we recommend you always enable it.
+*   dashboard: Deploy kubernetes dashboard as well as grafana and influxdb.
+*   storage: Create a default storage class. This storage class makes use of the hostpath\-provisioner pointing to a directory on the host.
+*   ingress: Create an ingress controller.
+*   gpu: Expose GPU(s) to MicroK8s by enabling the nvidia\-docker runtime and nvidia\-device\-plugin\-daemonset. Requires NVIDIA drivers to be already installed on the host system.
+*   istio: Deploy the core Istio services. You can use the `microk8s.istioctl` command to manage your deployments.
+*   registry: Deploy a docker private registry and expose it on localhost:32000. The storage addon will be enabled as part of this addon.
+
+
 
 microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0 &
 

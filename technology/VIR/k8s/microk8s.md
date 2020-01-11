@@ -2,7 +2,7 @@
 title: Kubernetes → microk8s
 description: A single package of k8s for 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.
 published: true
-date: 2020-01-11T12:43:02.394Z
+date: 2020-01-11T17:02:24.497Z
 tags: k8s, vir, microk8s
 ---
 
@@ -51,9 +51,15 @@ microk8s.enable dns dashboard ingress
 *   istio: Deploy the core Istio services. You can use the `microk8s.istioctl` command to manage your deployments.
 *   registry: Deploy a docker private registry and expose it on localhost:32000. The storage addon will be enabled as part of this addon.
 
+microk8s.kubectl -n kube-system get secret
+
+microk8s.kubectl -n kube-system describe secret kubernetes-dashboard-token-XXXXX
+
 
 
 microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0 &
+
+
 
 
 microk8s.kubectl -n kube-system describe secret $token

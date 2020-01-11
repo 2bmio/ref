@@ -2,7 +2,7 @@
 title: Kubernetes → microk8s
 description: A single package of k8s for 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.
 published: true
-date: 2020-01-11T12:37:20.099Z
+date: 2020-01-11T12:39:52.700Z
 tags: k8s, vir, microk8s
 ---
 
@@ -37,6 +37,7 @@ microk8s.add-node
   ubuntu@k8s-master:~$ microk8s.add-node
   Join node with: microk8s.join 192.168.64.3:25000/GdnlcwJRAWzigHhodFPmFTIMQHgrSCIZ
 
+microk8s.status
 microk8s.enable --help
 microk8s.enable dns dashboard ingress
 

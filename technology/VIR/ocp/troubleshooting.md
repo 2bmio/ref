@@ -2,7 +2,7 @@
 title: OpenShift → troubleshooting
 description: 
 published: true
-date: 2020-01-13T12:20:51.825Z
+date: 2020-01-13T12:22:08.139Z
 tags: vir, ocp, troubleshooting
 ---
 
@@ -42,19 +42,19 @@ https://docs.openshift.com/container-platform/3.3/install_config/registry/securi
 ```
 Backing up a project
 
-1 List all the relevant data to back up:
+# 1 List all the relevant data to back up:
+oc get all
 
-
-2 Export the project objects to a .yaml
+# 2 Export the project objects to a .yaml
 oc get -o yaml --export all > project.yaml
 
+# 3 Export the project’s role bindings, secrets, service accounts, and persistent volume claims
 
-3 Export the project’s role bindings, secrets, service accounts, and persistent volume claims
 $ for object in rolebindings serviceaccounts secrets imagestreamtags cm egressnetworkpolicies rolebindingrestrictions limitranges resourcequotas pvc templates cronjobs statefulsets hpa deployments replicasets poddisruptionbudget endpoints
 do
   oc get -o yaml --export $object > $object.yaml
 done
 
-4 To list all the namespaced objects:
+# 4 To list all the namespaced objects:
 oc api-resources --namespaced=true -o name
 ```

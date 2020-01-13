@@ -2,7 +2,7 @@
 title: OpenShift → troubleshooting
 description: 
 published: true
-date: 2020-01-13T12:22:08.139Z
+date: 2020-01-13T13:25:33.906Z
 tags: vir, ocp, troubleshooting
 ---
 

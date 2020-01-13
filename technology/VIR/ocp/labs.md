@@ -2,7 +2,7 @@
 title: OpenShift → laboratories
 description: testing and playground 
 published: true
-date: 2019-12-23T11:26:54.181Z
+date: 2020-01-13T08:45:22.470Z
 tags: vir, ocp, labs
 ---
 
@@ -17,6 +17,21 @@ tags: vir, ocp, labs
 # direcct connect
 t es
 ```
+
+
+## cleanUp
+
+```
+# oc get nodes
+NAME           STATUS    ROLES     AGE       VERSION
+vassvm-10001   Ready     master    304d      v1.9.1+a0ce1bc657
+vassvm-10002   Ready     <none>    304d      v1.9.1+a0ce1bc657
+vassvm-10003   Ready     <none>    304d      v1.9.1+a0ce1bc657
+vassvm-10004   Ready     compute   304d      v1.9.1+a0ce1bc657
+vassvm-10005   Ready     compute   304d      v1.9.1+a0ce1bc657
+
+```
+
 
 
 # proshift

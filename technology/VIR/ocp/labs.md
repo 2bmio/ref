@@ -2,7 +2,7 @@
 title: OpenShift → laboratories
 description: testing and playground 
 published: true
-date: 2020-01-13T08:45:22.470Z
+date: 2020-01-13T09:50:20.128Z
 tags: vir, ocp, labs
 ---
 
@@ -29,6 +29,10 @@ vassvm-10002   Ready     <none>    304d      v1.9.1+a0ce1bc657
 vassvm-10003   Ready     <none>    304d      v1.9.1+a0ce1bc657
 vassvm-10004   Ready     compute   304d      v1.9.1+a0ce1bc657
 vassvm-10005   Ready     compute   304d      v1.9.1+a0ce1bc657
+
+
+oc get pod -o wide --all-namespaces | grep vassvm-10002
+
 
 ```
 

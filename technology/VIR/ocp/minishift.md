@@ -2,7 +2,7 @@
 title: OpenShift → minishift
 description: Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine. 
 published: true
-date: 2020-01-08T23:30:31.228Z
+date: 2020-01-14T21:47:37.469Z
 tags: vir, ocp, minishift
 ---
 
@@ -124,6 +124,7 @@ sudo chmod +x /usr/local/bin/docker-machine-driver-kvm
 
 
 ```
+$ minishift start --cpus=4 --memory=8192 --vm-driver virtualbox
 $ minishift start --vm-driver virtualbox
 $ minishift config set vm-driver virtualbox
 $ minishift console --url

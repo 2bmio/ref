@@ -2,7 +2,7 @@
 title: Kubernetes → microk8s
 description: A single package of k8s for 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.
 published: true
-date: 2020-01-14T06:30:16.491Z
+date: 2020-01-14T08:51:49.277Z
 tags: k8s, vir, microk8s
 ---
 
@@ -67,5 +67,8 @@ microk8s.kubectl -n kube-system describe secret kubernetes-dashboard-token-XXXXX
 
 
 microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0
+
+
+https://[microk8s-master-ip]:10443
 
 ```

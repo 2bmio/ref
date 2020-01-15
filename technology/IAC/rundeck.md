@@ -2,12 +2,12 @@
 title: Rundeck→ home
 description: rundeck
 published: true
-date: 2020-01-15T12:36:53.403Z
+date: 2020-01-15T13:37:46.439Z
 tags: iac, rundeck
 ---
 
 
-
+# create user
 ```
 https://geekdudes.wordpress.com/2018/02/09/creating-rundec-acl-policies/
 

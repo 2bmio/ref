@@ -2,7 +2,7 @@
 title: OpenShift → minishift
 description: Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine. 
 published: true
-date: 2020-01-15T16:57:11.599Z
+date: 2020-01-15T17:02:36.644Z
 tags: vir, ocp, minishift
 ---
 

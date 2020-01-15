@@ -2,7 +2,7 @@
 title: OpenShift → minishift
 description: Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine. 
 published: true
-date: 2020-01-15T17:13:27.724Z
+date: 2020-01-15T17:34:43.744Z
 tags: vir, ocp, minishift
 ---
 
@@ -117,7 +117,15 @@ $ oc login -u admin
 ### esentials addons
 ```
 $ minishift addons apply registry-route admin-user
+$ eval $(minishift docker-env)
+$ eval $(minishift oc-env)
+$ oc login -u admin -p admin
+$ docker login -u admin -p `oc whoami -t` docker-registry-default.192.168.99.102.nip.io
 ```
+
+
+
+
 
 
 
@@ -156,6 +164,12 @@ rundeck/rundeck:3.2.1
 
 ```
 
+docker login -u admin -p cJGRCPEGPrx8tFi4rhVSdgHsVAWZL8UbnUe686eKJ5o $(minishift openshift registry)
+
+
+docker login -u admin -p cJGRCPEGPrx8tFi4rhVSdgHsVAWZL8UbnUe686eKJ5o docker-registry-default.192.168.99.102.nip.io
+
+docker login -u developer -p `oc whoami -t` docker-registry-default.192.168.99.102.nip.io
 
 
 ```

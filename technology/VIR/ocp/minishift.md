@@ -2,7 +2,7 @@
 title: OpenShift → minishift
 description: Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine. 
 published: true
-date: 2020-01-15T17:39:05.945Z
+date: 2020-01-17T09:34:25.152Z
 tags: vir, ocp, minishift
 ---
 
@@ -123,15 +123,13 @@ $ oc login -u admin -p admin
 $ docker login -u admin -p `oc whoami -t` docker-registry-default.192.168.99.102.nip.io
 ```
 
-
-
-
-
-docker tag rundeck/rundeck:3.2.1 
-
+### pushing images to registry
+```
+docker tag rundeck/rundeck:3.2.1 docker-registry-default.192.168.99.102.nip.io/openshift/rundeck:3.2.1
+docker push docker-registry-default.192.168.99.102.nip.io/openshift/rundeck:3.2.1
 
 ```
-```
+
 1. Create Template
 
     - `oc create -f openjdk-web-basic-s2i.yml  -n openshift`
@@ -140,36 +138,20 @@ docker tag rundeck/rundeck:3.2.1
 
     - `oc create is "openjdk-11-rhel7" -n openshift`
 
-minishift ssh
-
 3. Docker PULL
 
     - `docker pull registry.redhat.io/openjdk/openjdk-11-rhel7:1.1`
 
-4. Loggin into the registry
+4. Docker TAG
 
-oc login -u developer
-docker login docker-registry-default.192.168.99.101.nip.io -p $(oc whoami -t) -u developer
+    - `docker tag registry.redhat.io/openjdk/openjdk-11-rhel7:1.1 docker-registry.default.svc:5000/openshift/openjdk-11-rhel7:1.1`
 
-docker login docker-registry-default.192.168.99.101.nip.io -p admin -u system
+5. Docker PUSH
 
-docker login -u system -p admin $(minishift openshift registry)
-
-docker tag registry.redhat.io/openjdk/openjdk-11-rhel7:1.1 172.30.1.1:5000/openshift/openjdk-11-rhel7:1.1
-docker login -u admin -p kiCcJoQiI-iaoffUfstXaDnsxLwm3lGSPNY2fxBcUk4 172.30.1.1:5000
-docker push 172.30.1.1:5000/openshift/openjdk-11-rhel7:1.1
-
-docker tag rundeck/rundeck:3.2.1 $(minishift openshift registry)/myproject/my-app:3.2.1
-rundeck/rundeck:3.2.1
+    - `docker login -u admin -p $(oc whoami -t) -u unused docker-registry.default.svc:5000`
+    - `docker push docker-registry.default.svc:5000/openshift/openjdk-11-rhel7:1.1`
 
 ```
-
-docker login -u admin -p cJGRCPEGPrx8tFi4rhVSdgHsVAWZL8UbnUe686eKJ5o $(minishift openshift registry)
-
-
-docker login -u admin -p cJGRCPEGPrx8tFi4rhVSdgHsVAWZL8UbnUe686eKJ5o docker-registry-default.192.168.99.102.nip.io
-
-docker login -u developer -p `oc whoami -t` docker-registry-default.192.168.99.102.nip.io
 
 
 ```

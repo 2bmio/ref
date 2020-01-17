@@ -2,7 +2,7 @@
 title: Docker→ home
 description: Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers
 published: true
-date: 2020-01-17T20:59:36.248Z
+date: 2020-01-17T21:00:55.510Z
 tags: vir, docker
 ---
 
@@ -19,3 +19,9 @@ docker inspect --format='{{index .RepoDigests 0}}' $IMAGE
 
 # migrating from monolithic
 
+pac
+
+```
+
+
+```

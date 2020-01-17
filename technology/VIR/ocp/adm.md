@@ -2,7 +2,7 @@
 title: OpenShift → adm
 description: administrator CLI operations and their syntax.
 published: true
-date: 2019-12-26T10:32:47.067Z
+date: 2020-01-17T12:08:44.817Z
 tags: vir, ocp
 ---
 
@@ -11,6 +11,7 @@ tags: vir, ocp
 
 ```
 oc adm top node --heapster-namespace=openshift-infra --heapster-scheme=https
+oc adm top pods --heapster-namespace='openshift-infra' --heapster-scheme="https" --all-namespaces > consumoPods.txt
 
 ```
 

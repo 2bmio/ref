@@ -2,7 +2,7 @@
 title: Kubernetes → networking
 description: These tools may be useful if you are debugging connectivity issues, investigating network throughput problems, or exploring Kubernetes to learn how it operates.
 published: true
-date: 2020-01-18T21:04:08.647Z
+date: 2020-01-18T21:16:06.157Z
 tags: k8s, vir, networking
 ---
 
@@ -50,6 +50,31 @@ microk8s.kubectl edit service/kubernetes-dashboard -n kube-system
 
 
 ```
+
+microk8s.helm init
+
+cat <<EOF |microk8s.helm install -f -n kube-system traefik stable/traefik
+dashboard:
+  enabled: "true"
+  domain: "traefik-dashboard.2bm.io"
+  auth:
+    basic:
+      admin: $apr1$zjjGWKW4$W2JIcu4m26WzOzzESDF0W/
+rbac:
+  enabled: "true"
+ssl:
+  enabled: "true"
+  mtls:
+    enabled: "true"
+    optional: "true"
+  generateTLS: "true"
+kubernetes:
+  ingressEndpoint:
+    publishedService: "kube-system/traefik"
+metrics:
+  prometheus:
+    enabled: "true"
+EOF
 
 
 ```

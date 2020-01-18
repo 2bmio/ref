@@ -2,7 +2,7 @@
 title: Kubernetes → networking
 description: These tools may be useful if you are debugging connectivity issues, investigating network throughput problems, or exploring Kubernetes to learn how it operates.
 published: true
-date: 2020-01-18T19:08:09.049Z
+date: 2020-01-18T19:27:38.963Z
 tags: k8s, vir, networking
 ---
 
@@ -12,6 +12,13 @@ tags: k8s, vir, networking
 https://metallb.universe.tf/installation/
 
 kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.8.3/manifests/metallb.yaml
+
+# get the range IP of 10.156.103.XXX-10.156.103.XXX
+❯ multipass ls
+Name                    State             IPv4             Image
+k8s-app1                Running           10.156.103.230   Ubuntu 18.04 LTS
+k8s-app2                Running           10.156.103.48    Ubuntu 18.04 LTS
+k8s-master              Running           10.156.103.63    Ubuntu 18.04 LTS
 
 
 vi metallb-configmap.yaml

@@ -2,7 +2,7 @@
 title: Kubernetes → networking
 description: These tools may be useful if you are debugging connectivity issues, investigating network throughput problems, or exploring Kubernetes to learn how it operates.
 published: true
-date: 2020-01-18T21:16:28.163Z
+date: 2020-01-18T21:55:25.422Z
 tags: k8s, vir, networking
 ---
 
@@ -55,7 +55,7 @@ microk8s.helm init
 microk8s.helm init --override spec.selector.matchLabels.'name'='tiller',spec.selector.matchLabels.'app'='helm' --output yaml | sed 's@apiVersion: extensions/v1beta1@apiVersion: apps/v1@' | microk8s.kubectl apply -f -
 
 
-cat <<EOF |microk8s.helm install -f -n kube-system traefik stable/traefik
+cat <<EOF |microk8s.helm install -f -n kube-system --name traefik stable/traefik
 dashboard:
   enabled: "true"
   domain: "traefik-dashboard.2bm.io"
@@ -77,6 +77,171 @@ metrics:
   prometheus:
     enabled: "true"
 EOF
+
+helm install akomljen-charts/efk --name test --namespace=efk
+
+###################
+
+vi traefik-ds.yaml
+
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: traefik-ingress-controller
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+      - services
+      - endpoints
+      - secrets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - extensions
+    resources:
+      - ingresses
+    verbs:
+      - get
+      - list
+      - watch
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: traefik-ingress-controller
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: traefik-ingress-controller
+subjects:
+- kind: ServiceAccount
+  name: traefik-ingress-controller
+  namespace: kube-system
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: traefik-ingress-controller
+  namespace: kube-system
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: kube-system
+  name: traefik-conf
+data:
+  traefik.toml: |
+    # traefik.toml
+    logLevel = "DEBUG"
+ 
+    [traefikLog]
+      filePath = "log/traefik.log"
+      format   = "json"
+ 
+    [accessLog]
+      filePath = "log/access.log"
+      format = "json"
+    
+    defaultEntryPoints = ["http"]
+    
+    [entryPoints]
+        [entryPoints.http]
+        users =  ['admin:$apr1$ZywpxeoS$6U80kYPG116slxBceEsVz0']
+        address = ":9090"
+    
+    [web]
+    address = ":8095"
+    
+    [backends]
+      [backends.backend]
+         [backends.backend.LoadBalancer]
+           method = "wrr"
+         [backends.backend.servers.server1]
+         url = ":8080"
+         weight = 1
+    
+    [frontends]
+      [frontends.frontend1]
+      backend = "backend"
+        [frontends.frontend1.routes.test_1]
+        rule = "Host:dashboard-traefik.domain.com"
+---
+kind: DaemonSet
+apiVersion: apps/v1
+metadata:
+  name: traefik-ingress-controller
+  namespace: kube-system
+  labels:
+    k8s-app: traefik-ingress-lb
+spec:
+  selector:
+    matchLabels:
+      name: traefik-ingress-lb
+  template:
+    metadata:
+      labels:
+        k8s-app: traefik-ingress-lb
+        name: traefik-ingress-lb
+    spec:
+      serviceAccountName: traefik-ingress-controller
+      terminationGracePeriodSeconds: 60
+      volumes:
+      - name: config
+        configMap:
+          name: traefik-conf
+      # Enable this only if using static wildcard cert
+      # stored in a k8s Secret instead of LetsEncrypt
+      #- name: ssl
+      #  secret:
+      #    secretName: traefik-cert
+      containers:
+      - image: traefik
+        name: traefik-ingress-lb
+        resources:
+          limits:
+            cpu: 200m
+            memory: 30Mi
+          requests:
+            cpu: 100m
+            memory: 20Mi
+        volumeMounts:
+        - mountPath: "/config"
+          name: "config"
+        ports:
+        - name: http
+          containerPort: 80
+        - name: admin
+          containerPort: 8080
+        args:
+        - --api
+        - --kubernetes
+        - --logLevel=INFO
+        - --web
+        - --kubernetes
+        - --configfile=/config/traefik.toml
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: traefik-ingress-service
+  namespace: kube-system
+spec:
+  selector:
+    k8s-app: traefik-ingress-lb
+  ports:
+    - protocol: TCP
+      port: 80
+      name: web
+    - protocol: TCP
+      port: 8080
+      name: admin
+  type: LoadBalancer
+
 
 
 ```

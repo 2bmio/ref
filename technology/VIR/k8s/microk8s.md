@@ -2,7 +2,7 @@
 title: Kubernetes → microk8s
 description: A single package of k8s for 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.
 published: true
-date: 2020-01-18T21:01:44.220Z
+date: 2020-01-18T21:03:23.526Z
 tags: k8s, vir, microk8s
 ---
 

@@ -2,7 +2,7 @@
 title: Kubernetes → networking
 description: These tools may be useful if you are debugging connectivity issues, investigating network throughput problems, or exploring Kubernetes to learn how it operates.
 published: true
-date: 2020-01-18T19:07:03.973Z
+date: 2020-01-18T19:08:09.049Z
 tags: k8s, vir, networking
 ---
 
@@ -31,8 +31,9 @@ data:
 
 microk8s.kubectl apply -f metallb-configmap.yaml
 
+microk8s.kubectl edit service/kubernetes-dashboard -n kube-system
 
-
+  type: LoadBalancer
 
 ```
 

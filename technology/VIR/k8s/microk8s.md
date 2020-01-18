@@ -2,7 +2,7 @@
 title: Kubernetes → microk8s
 description: A single package of k8s for 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.
 published: true
-date: 2020-01-14T08:51:49.277Z
+date: 2020-01-18T21:01:44.220Z
 tags: k8s, vir, microk8s
 ---
 
@@ -49,7 +49,7 @@ microk8s.add-node
 
 microk8s.status
 microk8s.enable --help
-microk8s.enable dns dashboard ingress
+microk8s.enable dns dashboard ingress helm
 
 ## List of the most important addons
 

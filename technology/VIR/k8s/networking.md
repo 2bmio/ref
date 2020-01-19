@@ -2,7 +2,7 @@
 title: Kubernetes → networking
 description: These tools may be useful if you are debugging connectivity issues, investigating network throughput problems, or exploring Kubernetes to learn how it operates.
 published: true
-date: 2020-01-19T11:27:03.025Z
+date: 2020-01-19T11:27:19.698Z
 tags: k8s, vir, networking
 ---
 
@@ -58,8 +58,9 @@ microk8s.helm init
 microk8s.helm install -f traefik-values.yaml -n kube-system traefik stable/traefik --version 1.85.1
 microk8s.helm delete -n kube-system traefik
 
-vi helm-traefik-values.yaml
 
+vi helm-traefik-values.yaml
+###################
 dashboard:
   enabled: true
   domain: traefik.example.com

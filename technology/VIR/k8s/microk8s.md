@@ -2,7 +2,7 @@
 title: Kubernetes → microk8s
 description: A single package of k8s for 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.
 published: true
-date: 2020-01-19T09:30:05.164Z
+date: 2020-01-19T09:41:32.938Z
 tags: k8s, vir, microk8s
 ---
 
@@ -55,7 +55,16 @@ microk8s.add-node
 
 microk8s.status
 microk8s.enable --help
-microk8s.enable dns dashboard ingress helm
+microk8s.enable dns dashboard
+
+# for install lastest helm binary
+
+sudo snap install helm --classic
+sudo mkdir /var/snap/microk8s/current/bin
+sudo ln -s /snap/bin/helm /var/snap/microk8s/current/bin/helm
+
+
+# old way → microk8s.enable dns dashboard ingress helm
 
 ## List of the most important addons
 

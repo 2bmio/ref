@@ -2,7 +2,7 @@
 title: Kubernetes → microk8s
 description: A single package of k8s for 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.
 published: true
-date: 2020-01-18T21:03:23.526Z
+date: 2020-01-19T09:30:05.164Z
 tags: k8s, vir, microk8s
 ---
 
@@ -25,6 +25,12 @@ muttipass shell k8s-master
 sudo dnf install snapd
 sudo ln -s /var/lib/snapd/snap /snap
 multipass launch --name k8s-master --mem 8G --disk 40G
+
+example:
+multipass launch --name k8s-master --mem 4G --disk 20G
+multipass launch --name k8s-app-1 --mem 2G --disk 10G
+multipass launch --name k8s-app-2 --mem 2G --disk 10G
+
 multipass list
 muttipass shell k8s-master
 ```

@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-21T17:07:28.173Z
+date: 2020-01-21T17:07:59.766Z
 tags: sys,  services
 ---
 
@@ -48,7 +48,7 @@ Observabilidad:
 
 02 - RabbitMQ. Cola de mensajería para logs de microservicios  
 03 - Icinga. Monitorización de S.O. 1 agente por máquina
-
+8 - Grafana. Muestra dashboards de métricas. Recoge los datos de influxdb
 
 
 

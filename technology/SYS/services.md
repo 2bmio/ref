@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-21T16:58:45.157Z
+date: 2020-01-21T17:03:45.408Z
 tags: sys,  services
 ---
 
@@ -43,6 +43,9 @@ also known as background processes
 
 
 ```
+
+Observabilidad:
+
 01 - Zipkin. Cache para microservicios
 02 - RabbitMQ. Cola de mensajería para logs de microservicios  
 03 - Icinga. Monitorización de S.O. 1 agente por máquina
@@ -50,8 +53,11 @@ also known as background processes
 05 - MySQL. 1 instancia en liic01 y otra en libs01. Lo usan rundeck, nexus, icinga ...
 06 - Java. Runtime para microservicios
 07 - CollectD. Permite la recolección de métricas a modo de monitorización para S.O. y otros servicios. 1 agente por máquina.
-08 - Grafana. Muestra dashboards de métricas. Recoge los datos de influxdb
-09 - Elasticsearch. Se usa para almacenar logs y transacciones de microservicios 
+
+Operabilidad:
+
+
+09 - Elasticsearch. Se usa para almacenar logs y transacciones de microservicios
 10 - Rundeck. Portal para gestionar scripts y otros procesos de automatización sobre PaaS 
 11 - Ansible. Despliegue de OpenShift. Automatización de configuración en máquinas virtuales.
 12 - Jenkins. Orquestador de ciclo de vida de un microservicio. 

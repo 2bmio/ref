@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T09:24:04.788Z
+date: 2020-01-22T09:26:27.287Z
 tags: sys,  services
 ---
 
@@ -65,7 +65,15 @@ recogen estados:
         - lo que envía a influx es → el timestamp (del momento de la ejecución) + una clave + un valor 
 
 almacenan estados:
-04 - InfluxDB. Base de datos para métricas de servicios. Es donde se guardan las métricas de icinga y collectd
+	cluster structure:
+		04 - InfluxDB. Base de datos para métricas de servicios. Es donde se guardan las métricas de icinga y collectd
+
+	microservicios:
+		09 - Elasticsearch. Es una base de datos: Se usa para almacenar logs y transacciones de microservicios
+
+
+
+
 
 01 - Zipkin. Cache para microservicios
 05 - MySQL. 1 instancia en liic01 y otra en libs01. Lo usan rundeck, nexus, icinga ...
@@ -78,7 +86,6 @@ almacenan estados:
 Operabilidad:
 
 
-09 - Elasticsearch. Es una base de datos: Se usa para almacenar logs y transacciones de microservicios
 10 - Rundeck. Portal para gestionar scripts y otros procesos de automatización sobre PaaS 
 11 - Ansible. Despliegue de OpenShift. Automatización de configuración en máquinas virtuales.
 12 - Jenkins. Orquestador de ciclo de vida de un microservicio. 

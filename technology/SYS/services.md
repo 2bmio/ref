@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T08:27:23.743Z
+date: 2020-01-22T08:29:01.635Z
 tags: sys,  services
 ---
 
@@ -44,7 +44,6 @@ also known as background processes
 
 ### ¿como observar?
 ```
-
 Observabilidad:
 
 02 - RabbitMQ. Cola de mensajería para logs de microservicios  
@@ -73,7 +72,7 @@ Operabilidad:
 14 - Nexus. Caché de artefactos para compilar microservicios.
 15 - Docker. Motor de contenedores.
 16 - Maven. 
-17 - Lenguaje de progamación.
+
 18 - OpenShift. Orquestador de contenedores.
 19 - Logstash. Log appender 
 20 - Vault. Gestor de secretos y tokens 
@@ -83,6 +82,9 @@ Operabilidad:
 24 - GlusterFS. Cluster de almacenamiento POSIX distribuido.
 25 - CICD. Metodología de trabajo para mejorar el ciclo de vida de un microservicio. 
 26 - WSO2. Api Manager.
+
+runtime
+  17 - Lenguaje de progamación. → java + nodejs
 
 ```
 

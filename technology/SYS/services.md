@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T09:31:28.956Z
+date: 2020-01-22T09:31:40.304Z
 tags: sys,  services
 ---
 
@@ -52,6 +52,7 @@ muestran estados:
 			- permite historicos
 			- lo usamos para enviar alertas
 02 - RabbitMQ. Cola de mensajería para logs de microservicios  
+23 - Kibana. Muestra dashboards de elasticsearch
 
 recogen estados:
   03 - Icinga. Cliente Monitorización de S.O. 1 agente por máquina

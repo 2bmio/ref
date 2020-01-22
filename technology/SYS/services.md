@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T14:50:30.280Z
+date: 2020-01-22T15:39:35.828Z
 tags: sys,  services
 ---
 
@@ -76,7 +76,7 @@ almacenan estados:
 
 
 
-01 - Zipkin. Cache para microservicios
+
 
 
 ```
@@ -85,22 +85,23 @@ almacenan estados:
 ```
 Operabilidad:
 
+operaciones:
+  18 - OpenShift. Orquestador de contenedores.
+    15 - Docker. Motor de contenedores.
+    20 - Vault. Gestor de secretos y tokens 
+    21 - Consul. Service discovering, configuration discovering 
+    22 - Heketi. Orquestador de provisión dinámica de volumenes sobre glusterfs 
 
-10 - Rundeck. Portal para gestionar scripts y otros procesos de automatización sobre PaaS 
-11 - Ansible. Despliegue de OpenShift. Automatización de configuración en máquinas virtuales.
-12 - Jenkins. Orquestador de ciclo de vida de un microservicio. 
-13 - Sonarqube. Validación de código estático de microservicios.
-14 - Nexus. Caché de artefactos para compilar microservicios.
+mantenimiento
+  10 - Rundeck. Portal para gestionar scripts y otros procesos de automatización sobre PaaS 
+    11 - Ansible. Despliegue de OpenShift. Automatización de configuración en máquinas virtuales.
 
-16 - Maven.
-18 - OpenShift. Orquestador de contenedores.
-15 - Docker. Motor de contenedores.
-
-
-20 - Vault. Gestor de secretos y tokens 
-21 - Consul. Service discovering, configuration discovering 
-22 - Heketi. Orquestador de provisión dinámica de volumenes sobre glusterfs 
-25 - CICD. Metodología de trabajo para mejorar el ciclo de vida de un microservicio. 
+cicd
+  12 - Jenkins. Orquestador de ciclo de vida de un microservicio. 
+      01 - Zipkin. Cache para microservicios
+      13 - Sonarqube. Validación de código estático de microservicios.
+      14 - Nexus. Caché de artefactos para compilar microservicios.
+      16 - Maven.
 
 almacenamiento
   24 - GlusterFS. Cluster de almacenamiento POSIX distribuido.
@@ -110,7 +111,6 @@ apimanager
 
 runtime
   17 - Lenguaje de progamación. → java + nodejs [microservicios]
-
 ```
 
 

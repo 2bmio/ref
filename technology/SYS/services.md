@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-21T17:08:20.008Z
+date: 2020-01-22T08:27:23.743Z
 tags: sys,  services
 ---
 
@@ -42,6 +42,7 @@ also known as background processes
 ---------------------------
 
 
+### ¿como observar?
 ```
 
 Observabilidad:
@@ -57,10 +58,10 @@ Observabilidad:
 05 - MySQL. 1 instancia en liic01 y otra en libs01. Lo usan rundeck, nexus, icinga ...
 06 - Java. Runtime para microservicios
 07 - CollectD. Permite la recolección de métricas a modo de monitorización para S.O. y otros servicios. 1 agente por máquina.
+```
 
-
-
-
+### ¿como operar?
+```
 Operabilidad:
 
 

@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T09:31:40.304Z
+date: 2020-01-22T09:59:49.488Z
 tags: sys,  services
 ---
 
@@ -38,7 +38,7 @@ also known as background processes
 # journalctl --rotate --vacuum-size=500M
 ```
 
-
+09.00 min
 ---------------------------
 
 

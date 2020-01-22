@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T09:13:39.165Z
+date: 2020-01-22T09:24:04.788Z
 tags: sys,  services
 ---
 
@@ -46,22 +46,28 @@ also known as background processes
 ```
 Observabilidad:
 
-02 - RabbitMQ. Cola de mensajería para logs de microservicios  
-03 - Icinga. Monitorización de S.O. 1 agente por máquina
-			- tiene un agente en cada máquina
-07 - CollectD. Permite la recolección de métricas a modo de monitorización para S.O. y otros servicios. 1 agente por máquina.
-			- tiene un agente en cada máquina
-			-	para comprobar kibana
-      - para comprobar el status de elastik search
-			- por defecto tiene unas metricas que recoge valores conocidos del sistema operativo o scripts
-			- manda trazas a influx nosotros lo tenemos puesto en influx
-			- lo que envía a influx es → el timestamp (del momento de la ejecución) + una clave + un valor 
+muestran estados:
+08'- Icinga Monitor
 08 - Grafana. Muestra dashboards de métricas. Recoge los datos de influxdb
+			- permite historicos
+			- lo usamos para enviar alertas
+02 - RabbitMQ. Cola de mensajería para logs de microservicios  
 
+recogen estados:
+  03 - Icinga. Cliente Monitorización de S.O. 1 agente por máquina
+        - tiene un agente en cada máquina
+  07 - CollectD. Permite la recolección de métricas a modo de monitorización para S.O. y otros servicios. 1 agente por máquina.
+        - tiene un agente en cada máquina
+        -	para comprobar kibana
+        - para comprobar el status de elastik search
+        - por defecto tiene unas metricas que recoge valores conocidos del sistema operativo o scripts
+        - manda trazas a influx nosotros lo tenemos puesto en influx
+        - lo que envía a influx es → el timestamp (del momento de la ejecución) + una clave + un valor 
 
+almacenan estados:
+04 - InfluxDB. Base de datos para métricas de servicios. Es donde se guardan las métricas de icinga y collectd
 
 01 - Zipkin. Cache para microservicios
-04 - InfluxDB. Base de datos para métricas de servicios. Es donde se guardan las métricas de icinga y collectd 
 05 - MySQL. 1 instancia en liic01 y otra en libs01. Lo usan rundeck, nexus, icinga ...
 06 - Java. Runtime para microservicios
 

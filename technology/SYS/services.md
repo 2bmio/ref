@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T08:32:05.255Z
+date: 2020-01-22T09:08:44.123Z
 tags: sys,  services
 ---
 
@@ -48,6 +48,14 @@ Observabilidad:
 
 02 - RabbitMQ. Cola de mensajería para logs de microservicios  
 03 - Icinga. Monitorización de S.O. 1 agente por máquina
+	07 - CollectD. Permite la recolección de métricas a modo de monitorización para S.O. y otros servicios. 1 agente por máquina.
+			- tiene un agente en cada máquina
+			-	para comprobar kibana
+      - para comprobar el status de elastik search
+			- por defecto tiene unas metricas que recoge valores conocidos
+      - puedes ponerle los scripts
+			- manda trazas a influx nosotros lo tenemos puesto en influx
+			- lo que envía a influx es → el timestamp (del momento de la ejecución) + una clave + un valor 
 08 - Grafana. Muestra dashboards de métricas. Recoge los datos de influxdb
 
 
@@ -56,7 +64,7 @@ Observabilidad:
 04 - InfluxDB. Base de datos para métricas de servicios. Es donde se guardan las métricas de icinga y collectd 
 05 - MySQL. 1 instancia en liic01 y otra en libs01. Lo usan rundeck, nexus, icinga ...
 06 - Java. Runtime para microservicios
-07 - CollectD. Permite la recolección de métricas a modo de monitorización para S.O. y otros servicios. 1 agente por máquina.
+
 ```
 
 ### ¿como operar?
@@ -86,7 +94,7 @@ almacenamiento
   24 - GlusterFS. Cluster de almacenamiento POSIX distribuido.
 
 apimanager
-  26 - WSO2. Api Manager.
+  26 - WSO2. Api Manager. → usa java → 4 maquinas
 
 runtime
   17 - Lenguaje de progamación. → java + nodejs [microservicios]

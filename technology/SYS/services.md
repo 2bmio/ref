@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T09:26:27.287Z
+date: 2020-01-22T09:31:28.956Z
 tags: sys,  services
 ---
 
@@ -99,8 +99,6 @@ Operabilidad:
 20 - Vault. Gestor de secretos y tokens 
 21 - Consul. Service discovering, configuration discovering 
 22 - Heketi. Orquestador de provisión dinámica de volumenes sobre glusterfs 
-23 - Kibana. Muestra dashboards de elasticsearch 
-
 25 - CICD. Metodología de trabajo para mejorar el ciclo de vida de un microservicio. 
 
 almacenamiento

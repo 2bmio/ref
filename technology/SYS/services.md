@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T15:43:43.095Z
+date: 2020-01-22T15:44:51.786Z
 tags: sys,  services
 ---
 
@@ -116,5 +116,7 @@ runtime
 install
   5 rhel
 		apache - proxy inverso + monitorizado → 2500€
+    
+integracion F5 + OCP
 
 

@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T09:08:44.123Z
+date: 2020-01-22T09:13:39.165Z
 tags: sys,  services
 ---
 
@@ -48,12 +48,12 @@ Observabilidad:
 
 02 - RabbitMQ. Cola de mensajería para logs de microservicios  
 03 - Icinga. Monitorización de S.O. 1 agente por máquina
-	07 - CollectD. Permite la recolección de métricas a modo de monitorización para S.O. y otros servicios. 1 agente por máquina.
+			- tiene un agente en cada máquina
+07 - CollectD. Permite la recolección de métricas a modo de monitorización para S.O. y otros servicios. 1 agente por máquina.
 			- tiene un agente en cada máquina
 			-	para comprobar kibana
       - para comprobar el status de elastik search
-			- por defecto tiene unas metricas que recoge valores conocidos
-      - puedes ponerle los scripts
+			- por defecto tiene unas metricas que recoge valores conocidos del sistema operativo o scripts
 			- manda trazas a influx nosotros lo tenemos puesto en influx
 			- lo que envía a influx es → el timestamp (del momento de la ejecución) + una clave + un valor 
 08 - Grafana. Muestra dashboards de métricas. Recoge los datos de influxdb

@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T15:39:35.828Z
+date: 2020-01-22T15:43:43.095Z
 tags: sys,  services
 ---
 
@@ -113,6 +113,8 @@ runtime
   17 - Lenguaje de progamación. → java + nodejs [microservicios]
 ```
 
-
+install
+  5 rhel
+		apache - proxy inverso + monitorizado → 2500€
 
 

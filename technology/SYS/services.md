@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T08:29:01.635Z
+date: 2020-01-22T08:32:05.255Z
 tags: sys,  services
 ---
 
@@ -79,12 +79,17 @@ Operabilidad:
 21 - Consul. Service discovering, configuration discovering 
 22 - Heketi. Orquestador de provisión dinámica de volumenes sobre glusterfs 
 23 - Kibana. Muestra dashboards de elasticsearch 
-24 - GlusterFS. Cluster de almacenamiento POSIX distribuido.
+
 25 - CICD. Metodología de trabajo para mejorar el ciclo de vida de un microservicio. 
-26 - WSO2. Api Manager.
+
+almacenamiento
+  24 - GlusterFS. Cluster de almacenamiento POSIX distribuido.
+
+apimanager
+  26 - WSO2. Api Manager.
 
 runtime
-  17 - Lenguaje de progamación. → java + nodejs
+  17 - Lenguaje de progamación. → java + nodejs [microservicios]
 
 ```
 

@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T09:59:49.488Z
+date: 2020-01-22T14:50:30.280Z
 tags: sys,  services
 ---
 
@@ -47,12 +47,12 @@ also known as background processes
 Observabilidad:
 
 muestran estados:
-08'- Icinga Monitor
-08 - Grafana. Muestra dashboards de métricas. Recoge los datos de influxdb
-			- permite historicos
-			- lo usamos para enviar alertas
-02 - RabbitMQ. Cola de mensajería para logs de microservicios  
-23 - Kibana. Muestra dashboards de elasticsearch
+  08'- Icinga Monitor
+  08 - Grafana. Muestra dashboards de métricas. Recoge los datos de influxdb
+        - permite historicos
+        - lo usamos para enviar alertas
+  02 - RabbitMQ. Cola de mensajería para logs de microservicios  
+  23 - Kibana. Muestra dashboards de elasticsearch
 
 recogen estados:
   03 - Icinga. Cliente Monitorización de S.O. 1 agente por máquina
@@ -64,11 +64,11 @@ recogen estados:
         - por defecto tiene unas metricas que recoge valores conocidos del sistema operativo o scripts
         - manda trazas a influx nosotros lo tenemos puesto en influx
         - lo que envía a influx es → el timestamp (del momento de la ejecución) + una clave + un valor 
-
+	19 - Logstash. Log appender
 almacenan estados:
 	cluster structure:
 		04 - InfluxDB. Base de datos para métricas de servicios. Es donde se guardan las métricas de icinga y collectd
-
+		05 - MySQL. 1 instancia en liic01 y otra en libs01. Lo usan rundeck, nexus, icinga ...
 	microservicios:
 		09 - Elasticsearch. Es una base de datos: Se usa para almacenar logs y transacciones de microservicios
 
@@ -77,8 +77,7 @@ almacenan estados:
 
 
 01 - Zipkin. Cache para microservicios
-05 - MySQL. 1 instancia en liic01 y otra en libs01. Lo usan rundeck, nexus, icinga ...
-06 - Java. Runtime para microservicios
+
 
 ```
 
@@ -92,11 +91,12 @@ Operabilidad:
 12 - Jenkins. Orquestador de ciclo de vida de un microservicio. 
 13 - Sonarqube. Validación de código estático de microservicios.
 14 - Nexus. Caché de artefactos para compilar microservicios.
-15 - Docker. Motor de contenedores.
-16 - Maven. 
 
+16 - Maven.
 18 - OpenShift. Orquestador de contenedores.
-19 - Logstash. Log appender 
+15 - Docker. Motor de contenedores.
+
+
 20 - Vault. Gestor de secretos y tokens 
 21 - Consul. Service discovering, configuration discovering 
 22 - Heketi. Orquestador de provisión dinámica de volumenes sobre glusterfs 

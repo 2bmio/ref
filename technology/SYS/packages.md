@@ -2,11 +2,18 @@
 title: System → packages
 description: 
 published: true
-date: 2019-12-23T11:55:04.919Z
+date: 2020-01-23T20:55:15.020Z
 tags: sys, packages
 ---
 
 # commons packages configs
+
+
+## get a rpm list
+
+```
+rpm -qa > installed-rpm.txt
+```
 
 
 ## ICINGA2

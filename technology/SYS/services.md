@@ -2,7 +2,7 @@
 title: System → services
 description: 
 published: true
-date: 2020-01-22T15:44:51.786Z
+date: 2020-01-23T09:44:01.515Z
 tags: sys,  services
 ---
 
@@ -90,7 +90,6 @@ operaciones:
     15 - Docker. Motor de contenedores.
     20 - Vault. Gestor de secretos y tokens 
     21 - Consul. Service discovering, configuration discovering 
-    22 - Heketi. Orquestador de provisión dinámica de volumenes sobre glusterfs 
 
 mantenimiento
   10 - Rundeck. Portal para gestionar scripts y otros procesos de automatización sobre PaaS 
@@ -105,6 +104,7 @@ cicd
 
 almacenamiento
   24 - GlusterFS. Cluster de almacenamiento POSIX distribuido.
+  22 - Heketi. Orquestador de provisión dinámica de volumenes sobre glusterfs 
 
 apimanager
   26 - WSO2. Api Manager. → usa java → 4 maquinas

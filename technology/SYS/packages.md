@@ -2,7 +2,7 @@
 title: System → packages
 description: 
 published: true
-date: 2020-01-24T09:35:39.841Z
+date: 2020-01-24T10:32:58.892Z
 tags: sys, packages
 ---
 
@@ -12,11 +12,11 @@ tags: sys, packages
 ## get a rpm list
 
 ```
-ssh root@[node-name]
-mkdir -p /root/explotacion/anibal/installed-rpm
-cd /root/explotacion/anibal/installed-rpm
+ssh [user]@[node-name]
+mkdir -p /[user]/explotacion/anibal/installed-rpm
+cd /[user]/explotacion/anibal/installed-rpm
 rpm -qa > installed-rpm-[node-name].txt
-scp root@[node-name]:/root/explotacion/anibal/installed-rpm/installed-rpm-[node-name].txt .
+scp [user]@[node-name]:/root/explotacion/anibal/installed-rpm/installed-rpm-[node-name].txt .
 ```
 
 

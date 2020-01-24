@@ -2,7 +2,7 @@
 title: bash
 description: 
 published: true
-date: 2019-12-13T23:15:48.835Z
+date: 2020-01-24T11:48:25.947Z
 tags: ops
 ---
 
@@ -755,3 +755,27 @@ fi
 * [Learn bash in y minutes](https://learnxinyminutes.com/docs/bash/) _(learnxinyminutes.com)_
 * [Bash Guide](http://mywiki.wooledge.org/BashGuide) _(mywiki.wooledge.org)_
 * [ShellCheck](https://www.shellcheck.net/) _(shellcheck.net)_
+
+
+---
+
+## compare script
+
+```
+#!/bin/bash
+
+Afile="$1"
+Bfile="$2"
+
+while read line
+do
+  if grep -q ${line} $Bfile; then
+    echo ${line} >> same-rpm.txt
+  else
+    echo ${line} >> no-same-rpm.txt  
+  fi
+done < $Afile
+
+```
+
+

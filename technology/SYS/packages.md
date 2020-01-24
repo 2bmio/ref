@@ -2,7 +2,7 @@
 title: System → packages
 description: 
 published: true
-date: 2020-01-23T20:55:15.020Z
+date: 2020-01-24T07:54:09.320Z
 tags: sys, packages
 ---
 
@@ -12,6 +12,8 @@ tags: sys, packages
 ## get a rpm list
 
 ```
+mkdir -p /root/explotacion/anibal/installed-rpm
+cd /root/explotacion/anibal/installed-rpm
 rpm -qa > installed-rpm.txt
 ```
 

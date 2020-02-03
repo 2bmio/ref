@@ -2,11 +2,11 @@
 title: System → performance
 description: performance and maintenance
 published: true
-date: 2020-01-14T11:43:24.526Z
+date: 2020-02-03T13:49:32.604Z
 tags: sys, performance
 ---
 
-# Monitoring
+# Ninja Monitoring and performance
 
 ## MEMORY usage
 
@@ -48,3 +48,18 @@ du -sm * | sort -nr
 du -ksh * | sort -h
 
 ```
+
+## RETRIEVE
+
+
+### sort
+
+```
+man sort
+
+  -M, --month-sort            compare (unknown) < 'JAN' < ... < 'DEC'
+  -r, --reverse               reverse the result of comparisons
+  -n, --numeric-sort          compare according to string numerical value
+```
+
+

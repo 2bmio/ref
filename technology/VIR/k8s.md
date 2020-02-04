@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T12:06:44.328Z
+date: 2020-02-04T12:12:47.487Z
 tags: k8s, vir
 ---
 
@@ -119,7 +119,8 @@ kubectl api-resources
 ## Containers
 ## Workloads
 ### Controllers → is the brain behind k8s
-#### ReplicaSet → new way
+> they are the process that monitorize kubernetes objects and respond accordingly
+#### ReplicaSet → new recommended way
 > Es un OBJETO Podemos tener una app que no tenga downtime → el famos estamos actualizando el servicio → cuando las app se siguen actualizando
 Garantiza que existen un número predefinido de pods funcionando al mismo tiempo.
 Se indica el número de réplicas con el valor "replicas: 2"
@@ -127,6 +128,9 @@ Se indica el número de réplicas con el valor "replicas: 2"
 > Asegura tolerancia a fallos sobre un conjuto de PODs: es importante que el POD gestionado por el RC sea STATELESS, no es útil con base de datos ni sesiones.
 
 #### ReplicaSet/ReplicationController → selector/rolling-update
+
+
+
 
 Replica Set is the next generation of Replication Controller. Replication controller is kinda imperative, but replica sets try to be as declarative as possible.
 

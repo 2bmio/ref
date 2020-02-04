@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T09:27:53.186Z
+date: 2020-02-04T09:40:29.479Z
 tags: k8s, vir
 ---
 
@@ -118,13 +118,16 @@ kubectl api-resources
 # CONCEPTS
 ## Containers
 ## Workloads
-### Controllers
+### Controllers → estados declarativos
 #### ReplicaSet
-> es un OBJETO Podemos tener una app que no tenga downtime → el famos estamos actualizando el servicio → cuando las app se siguen actualizando 
+> Es un OBJETO Podemos tener una app que no tenga downtime → el famos estamos actualizando el servicio → cuando las app se siguen actualizando
+Garantiza que existen un número predefinido de pods funcionando al mismo tiempo.
+Se indica el número de réplicas con el valor "replicas: 2"
 #### ReplicationContreller
 #### Deployments
-> a diferencia de un ReplicaSet, un Deployment incorpora RevissionHistoryLimit (rolleback) y strategy (RollingUpdate o Recrete)
-> es un OBJETO de una abstracción un poco mayor a un ReplicaSet el cual tiene mayor rangos de acción en forma declarativa, esto quere decir por ejemplo que permite rolling updates, rolleback, cleanup, pod scaling, replica management.
+> Es un OBJETO de una abstracción un poco mayor a un ReplicaSet el cual tiene mayor rangos de acción en forma declarativa, esto quere decir por ejemplo que permite rolling updates, rolleback, cleanup, pod scaling, replica management.
+A diferencia de un ReplicaSet, un Deployment incorpora RevissionHistoryLimit (rolleback) y strategy (RollingUpdate o Recrete)
+Se pueden usar annotations para automatizaciones.
 #### StatefulSets
 #### DaemonSet
 #### Garbage Collection

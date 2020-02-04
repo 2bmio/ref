@@ -2,7 +2,7 @@
 title: System → packages
 description: 
 published: true
-date: 2020-02-04T07:54:39.885Z
+date: 2020-02-04T08:15:40.206Z
 tags: sys, packages
 ---
 
@@ -49,6 +49,8 @@ systemctl restart icinga2
 ```
 
 ## VAULT
+
+## CONSUL
 
 
 

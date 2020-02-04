@@ -2,7 +2,7 @@
 title: System → packages
 description: 
 published: true
-date: 2020-01-24T10:32:58.892Z
+date: 2020-02-04T07:41:46.938Z
 tags: sys, packages
 ---
 
@@ -47,3 +47,9 @@ vi /etc/icinga2/conf.d/hosts-pichincha/libs01-external-services.conf
 # restart service
 systemctl restart icinga2
 ```
+
+## VAULT
+
+
+
+

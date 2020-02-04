@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T09:57:59.370Z
+date: 2020-02-04T10:00:18.810Z
 tags: k8s, vir
 ---
 
@@ -138,6 +138,15 @@ Para automatizar este tipo de despligue a a menudo en el mismo pod se suele pone
 
 
 #### DaemonSet
+
+> Un DaemonSet garantiza que todos (o algunos) de los nodos ejecuten una copia de un Pod. Conforme se añade más nodos al clúster, nuevos Pods son añadidos a los mismos. Conforme se elimina nodos del clúster, dichos Pods se destruyen. Al eliminar un DaemonSet se limpian todos los Pods que han sido creados.
+
+> Algunos casos de uso típicos de un DaemonSet son:
+Ejecutar un proceso de almacenamiento en el clúster, como glusterd, ceph, en cada nodo.
+Ejecutar un proceso de recolección de logs en cada nodo, como fluentd o logstash.
+Ejecutar un proceso de monitorización de nodos en cada nodo, como Prometheus Node Exporter, Sysdig Agent, collectd, Dynatrace OneAgent, AppDynamics Agent, Datadog agent, New Relic agent, Ganglia gmond o un agente de Instana.
+
+
 #### Garbage Collection
 #### TTL Controller for Finished Resources
 #### Jobs - Run to Completion

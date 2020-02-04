@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2019-12-31T20:58:36.096Z
+date: 2020-02-04T09:07:03.908Z
 tags: k8s, vir
 ---
 
@@ -113,4 +113,28 @@ kubectl get componentstatuses
 kubectl api-resources
 
 ```
+
+
+# CONCEPTS
+## Containers
+## Workloads
+### Controllers
+#### ReplicaSet
+#### ReplicationContreller
+#### Deployments
+#### StatefulSets
+#### DaemonSet
+#### Garbage Collection
+#### TTL Controller for Finished Resources
+#### Jobs - Run to Completion
+#### CronJob
+
+
+
+
+
+
+
+
+
 

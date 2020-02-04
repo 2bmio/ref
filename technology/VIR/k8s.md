@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T12:01:45.609Z
+date: 2020-02-04T12:06:44.328Z
 tags: k8s, vir
 ---
 
@@ -118,7 +118,7 @@ kubectl api-resources
 # CONCEPTS
 ## Containers
 ## Workloads
-### Controllers → estados declarativos
+### Controllers → is the brain behind k8s
 #### ReplicaSet → new way
 > Es un OBJETO Podemos tener una app que no tenga downtime → el famos estamos actualizando el servicio → cuando las app se siguen actualizando
 Garantiza que existen un número predefinido de pods funcionando al mismo tiempo.

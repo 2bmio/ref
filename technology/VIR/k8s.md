@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T09:40:29.479Z
+date: 2020-02-04T09:57:22.499Z
 tags: k8s, vir
 ---
 
@@ -128,7 +128,16 @@ Se indica el número de réplicas con el valor "replicas: 2"
 > Es un OBJETO de una abstracción un poco mayor a un ReplicaSet el cual tiene mayor rangos de acción en forma declarativa, esto quere decir por ejemplo que permite rolling updates, rolleback, cleanup, pod scaling, replica management.
 A diferencia de un ReplicaSet, un Deployment incorpora RevissionHistoryLimit (rolleback) y strategy (RollingUpdate o Recrete)
 Se pueden usar annotations para automatizaciones.
-#### StatefulSets
+#### StatefulSets > petSets
+> El concepto de mascota → Gestiona el despliegue y escalado de un conjunto de Pods , y garantiza el orden y unicidad de dichos Pods. StatefulSet mantiene una identidad asociada a sus Pods. Estos pods se crean a partir de la misma especificación, pero no pueden intercambiarse; cada uno tiene su propio identificador persistente que mantiene a lo largo de cualquier re-programación.
+Un StatefulSet opera bajo el mismo patrón que cualquier otro controlador. Se define el estado deseado en un objeto StatefulSet, y el controlador del StatefulSet efectúa las actualizaciones que sean necesarias para alcanzarlo a partir del estado actual.
+
+
+Hay momentos en los que necesitamos que los pod sean permantes y tenerlos localizados bajo un mismo nombre por ejemplo cuando usamos base de datos.
+
+Para automatizar este tipo de despligue a a menudo en el mismo pod se suele poner un script que auto-configura este servicio, para ello se usa un configMap → sideCard
+
+
 #### DaemonSet
 #### Garbage Collection
 #### TTL Controller for Finished Resources

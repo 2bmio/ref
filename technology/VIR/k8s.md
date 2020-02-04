@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T10:00:18.810Z
+date: 2020-02-04T10:03:01.067Z
 tags: k8s, vir
 ---
 
@@ -138,6 +138,7 @@ Para automatizar este tipo de despligue a a menudo en el mismo pod se suele pone
 
 
 #### DaemonSet
+> Son Deployments que se ejectan en todos los nodos
 
 > Un DaemonSet garantiza que todos (o algunos) de los nodos ejecuten una copia de un Pod. Conforme se añade más nodos al clúster, nuevos Pods son añadidos a los mismos. Conforme se elimina nodos del clúster, dichos Pods se destruyen. Al eliminar un DaemonSet se limpian todos los Pods que han sido creados.
 

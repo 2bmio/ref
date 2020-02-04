@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T09:27:05.076Z
+date: 2020-02-04T09:27:53.186Z
 tags: k8s, vir
 ---
 
@@ -123,7 +123,7 @@ kubectl api-resources
 > es un OBJETO Podemos tener una app que no tenga downtime → el famos estamos actualizando el servicio → cuando las app se siguen actualizando 
 #### ReplicationContreller
 #### Deployments
-> a diferencia de un ReplicaSet, un Deployment incorpora RevissionHistoryLimit (rolleback) y strategy (rolling update)
+> a diferencia de un ReplicaSet, un Deployment incorpora RevissionHistoryLimit (rolleback) y strategy (RollingUpdate o Recrete)
 > es un OBJETO de una abstracción un poco mayor a un ReplicaSet el cual tiene mayor rangos de acción en forma declarativa, esto quere decir por ejemplo que permite rolling updates, rolleback, cleanup, pod scaling, replica management.
 #### StatefulSets
 #### DaemonSet

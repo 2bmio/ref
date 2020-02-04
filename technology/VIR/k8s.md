@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T10:03:01.067Z
+date: 2020-02-04T10:05:00.738Z
 tags: k8s, vir
 ---
 
@@ -135,7 +135,6 @@ Se pueden usar annotations para automatizaciones.
 
 > Hay momentos en los que necesitamos que los pod sean permantes y tenerlos localizados bajo un mismo nombre por ejemplo cuando usamos base de datos.
 Para automatizar este tipo de despligue a a menudo en el mismo pod se suele poner un script que auto-configura este servicio, para ello se usa un configMap → sideCard
-
 
 #### DaemonSet
 > Son Deployments que se ejectan en todos los nodos

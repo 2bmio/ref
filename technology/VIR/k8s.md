@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T11:15:57.187Z
+date: 2020-02-04T11:34:35.047Z
 tags: k8s, vir
 ---
 
@@ -125,6 +125,43 @@ Garantiza que existen un número predefinido de pods funcionando al mismo tiempo
 Se indica el número de réplicas con el valor "replicas: 2"
 #### ReplicationController
 > Asegura tolerancia a fallos sobre un conjuto de PODs: es importante que el POD gestionado por el RC sea STATELESS, no es útil con base de datos ni sesiones.
+
+#### ReplicaSet/ReplicationController
+
+Replica Set is the next generation of Replication Controller. Replication controller is kinda imperative, but replica sets try to be as declarative as possible.
+
+1.The main difference between a Replica Set and a Replication Controller right now is the selector support.
+
+```
++--------------------------------------------------+-----------------------------------------------------+
+|                   Replica Set                    |               Replication Controller                |
++--------------------------------------------------+-----------------------------------------------------+
+| Replica Set supports the new set-based selector. | Replication Controller only supports equality-based |
+| This gives more flexibility. for eg:             | selector. for eg:                                   |
+|          environment in (production, qa)         |             environment = production                |
+|  This selects all resources with key equal to    | This selects all resources with key equal to        |
+|  environment and value equal to production or qa | environment and value equal to production           |
++--------------------------------------------------+-----------------------------------------------------+
+
+```
+
+2.The second thing is the updating the pods.
+
+```
++-------------------------------------------------------+-----------------------------------------------+
+|                      Replica Set                      |            Replication Controller             |
++-------------------------------------------------------+-----------------------------------------------+
+| rollout command is used for updating the replica set. | rolling-update command is used for updating   |
+| Even though replica set can be used independently,    | the replication controller. This replaces the |
+| it is best used along with deployments which          | specified replication controller with a new   |
+| makes them declarative.                               | replication controller by updating one pod    |
+|                                                       | at a time to use the new PodTemplate.         |
++-------------------------------------------------------+-----------------------------------------------+
+
+```
+
+These are the two things that differentiates RS and RC. Deployments with RS is widely used as it is more declarative.
+
 
 #### Deployments
 > Es un OBJETO de una abstracción un poco mayor a un ReplicaSet el cual tiene mayor rangos de acción en forma declarativa, esto quere decir por ejemplo que permite rolling updates, rolleback, cleanup, pod scaling, replica management.

@@ -2,7 +2,7 @@
 title: Kubernetes → home
 description: Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.
 published: true
-date: 2020-02-04T11:37:13.990Z
+date: 2020-02-04T11:47:58.612Z
 tags: k8s, vir
 ---
 
@@ -126,7 +126,7 @@ Se indica el número de réplicas con el valor "replicas: 2"
 #### ReplicationController → old way
 > Asegura tolerancia a fallos sobre un conjuto de PODs: es importante que el POD gestionado por el RC sea STATELESS, no es útil con base de datos ni sesiones.
 
-#### ReplicaSet/ReplicationController
+#### ReplicaSet/ReplicationController → selector
 
 Replica Set is the next generation of Replication Controller. Replication controller is kinda imperative, but replica sets try to be as declarative as possible.
 
